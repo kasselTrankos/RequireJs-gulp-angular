@@ -1,0 +1,26 @@
+{
+  "name": "requirejs",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "kasselTrankos <alvaro.touzon@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kasselTrankos/RequireJs-gulp-backbone",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "underscore": "~1.8.3",
+    "requirejs": "~2.1.22",
+    "async": "~1.5.2",
+    "angular": "~1.5.0",
+    "angularAMD": "~0.2.1"
+  }
+}
