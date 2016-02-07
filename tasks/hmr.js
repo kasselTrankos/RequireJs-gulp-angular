@@ -17,5 +17,6 @@ gulp.task('watch:hot-reload-front-end', function () {
     });
   });
   gulp.watch('./src/app/**/*.js').on('change', function (file) {
+    console.log(' wich file is changed', file);
   });
 });

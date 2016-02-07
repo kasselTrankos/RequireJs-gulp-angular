@@ -13,6 +13,11 @@
     "bower-requirejs": "^1.2.0",
     "colors": "^1.1.2",
     "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
     "socketio": "^1.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.11.1",
+    "i": "^0.3.4"
   }
 }
