@@ -5,7 +5,7 @@
   requirejs.config({
     enforceDefine: false,
     waitSeconds: 7,
-    baseUrl: '/public',
+    baseUrl: '/app',
     paths: {
       test: 'components/test.js',
       async: '../../bower_components/async/lib/async',
@@ -24,7 +24,7 @@
 
     ]
   });
-  require(['app', 'services', 'controllers'], function (app) {
+  require(['app'], function (app) {
     // initialisation code defined within app.js
     app.init();
   });
