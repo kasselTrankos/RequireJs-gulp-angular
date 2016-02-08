@@ -7,7 +7,8 @@
     waitSeconds: 7,
     baseUrl: '/app',
     paths: {
-      test: 'components/test.js',
+      '#allComponents': 'components/',
+      socketio: '../../node_modules/socket.io-client/socket.io',
       async: '../../bower_components/async/lib/async',
       backbone: '../../bower_components/backbone/backbone',
       requirejs: '../../bower_components/requirejs/require',
