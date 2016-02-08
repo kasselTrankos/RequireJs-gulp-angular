@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  colors = require('colors'),
   socketio = require('socket.io');
 var PORT = process.env.PORT || 3002;
 gulp.task('watch:hot-reload-front-end', function () {

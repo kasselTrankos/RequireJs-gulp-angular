@@ -8,13 +8,14 @@
     baseUrl: '/app',
     paths: {
       '#allComponents': 'components/',
-      socketio: '../../node_modules/socket.io-client/socket.io',
+      socketio: '../../bower_components/socket.io-client/socket.io',
       async: '../../bower_components/async/lib/async',
       backbone: '../../bower_components/backbone/backbone',
       requirejs: '../../bower_components/requirejs/require',
       underscore: '../../bower_components/underscore/underscore',
       angular: '../../bower_components/angular/angular',
-      angularAMD: '../../bower_components/angularAMD/angularAMD'
+      angularAMD: '../../bower_components/angularAMD/angularAMD',
+      hmr: 'hotReload/hotReloadingHandler'
     },
     shim: {
       angular: {

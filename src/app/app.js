@@ -1,6 +1,6 @@
-define(['angular', 'controller/AppController'], function (angular, AppController) {
+define(['angular', 'controller/AppController', 'hmr'], function (angular, AppController, hmr) {
   console.log('lo ado is real');
-
+  hmr.init();
   var app = angular.module('ats.main', [])
     .controller('appController', ['$scope', AppController])
 
