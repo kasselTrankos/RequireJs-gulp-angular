@@ -1,4 +1,4 @@
-# RequireJs-gulp-backbonedm
+# RequireJs-gulp-angular
 
 Intento de llegar a realizar un HMR para angularjs, intento cierto y muy cercano
 consigiendo en este momento(10/02/16) que se cambie el scope del controller, como?;
