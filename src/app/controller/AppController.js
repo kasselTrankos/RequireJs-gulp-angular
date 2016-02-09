@@ -2,8 +2,9 @@ define([], function () {
 
   var AppController =  function($scope) {
     var vm = this;
-    vm.car = 'mercedes1fddddddmanides';
-    $scope.greeting = 'Tele me mi 1';
+    vm.car = 'fron fuego';
+    vm.teo = 'lee libros';
+    //$scope.greeting = 'joder 12d';
   }
   return AppController;
 });

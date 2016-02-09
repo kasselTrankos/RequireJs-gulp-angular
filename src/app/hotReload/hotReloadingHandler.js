@@ -1,4 +1,4 @@
-define(['socketio', 'hmreplace'], function(io, hmreplace){
+define(['socketio', 'hmreplace', 'angular'], function(io, hmreplace, angular){
   function init(){
     function replaceAll(str, target, replacement) {
       return str.split(target).join(replacement);
@@ -33,8 +33,36 @@ define(['socketio', 'hmreplace'], function(io, hmreplace){
         // var filename = data;
         console.log(filename, result);
         require(['#allControllers'],function(allControllers){ //I have a module '#allViews' that contains all my front-end views
+
+        allControllers[filename] = result;
+
         console.log(allControllers, filename, allControllers[filename]);
-          allControllers[filename] = result;
+        //Primera prueba
+        ///console.log(angular.module('ats.main'));
+        var elm = angular.element(document);
+        var div = angular.element(document.querySelector('[ng-controller]'));
+        //var app = angular.module('ats.main');
+        console.log(window.app, elm);
+        window.app._invokeQueue[0][2][1][1] = result;
+        angular.injector(['ng', 'ats.main']).invoke(function($compile, $rootScope) {
+            $compile(elm)($rootScope);
+            $compile(div)(div.scope());
+            div.scope().$apply()
+            $rootScope.$apply();
+        });
+
+        //elm.injector().get('$controller')(result, {$scope: elm.scope()});
+        //window.app.controller('appController', ['$scope', result]);
+        //elm.scope().$apply();
+        //elm.injector().get('$compile')(elm.contents())(elm.scope());
+        console.log(' DONE ???');
+        //elm.injector().get('appController');
+        //.get('$compile')(elm.contents())(elm.scope());
+        /*app.run(function($rootScope) {
+          console.log($rootScope);
+          $rootScope.$digest();
+          // you can inject any instance here
+        });*/
           //Backbone.history.loadUrl(Backbone.history.fragment); //reload the current page (don't need to worry about any other pages)
         });
       });

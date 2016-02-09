@@ -5,8 +5,9 @@
         <script data-main="app/main.js" src="bower_components/requirejs/require.js"></script>
     </head>
     <body>
-      <div ng-controller="appController">
-        {{greeting}}
+      <div ng-controller="appController as vm">
+        <br /><br/><br/>
+        {{vm.car}}, {{vm.teo}}
       </div>
 
         <a href="page2.html">Go to Page 2</a>
